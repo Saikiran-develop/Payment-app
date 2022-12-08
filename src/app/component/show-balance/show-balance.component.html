@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-3">
+    <h1>Show Balance</h1> 
+    <form [formGroup]="showBalanceForm"  (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id</label>
+            <input formControlName="id" type="text" class="form-control">
+        </div >
+
+        <br>
+        <button pButton type="submit" label="Show Balance"  ></button>
+        
+    </form>
+    <div *ngIf="getbalance" ><h4> Your balance is {{getbalance}}</h4></div>
+</div>
+    
+</div>
+<p-toast position="top-right"></p-toast>

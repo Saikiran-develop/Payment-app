@@ -1,0 +1,28 @@
+<p>fund-transfer works!</p>
+
+
+<div class="container"> 
+    <div class="row col-md-6 col-md-offset-3">
+    <h1>Fund Transfer amount</h1> 
+    <form [formGroup]="fundForm"  (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>From Id</label>
+            <input formControlName="idOne" type="text" class="form-control">
+        </div >
+        <div class="form-group">
+            <label>To Id</label>
+            <input formControlName="idTwo" type="text" class="form-control">
+        </div >
+        <div class="form-group">
+            <label>Amount</label>
+            <input formControlName="amount" type="text" class="form-control">
+        </div >
+        <br>
+        <button pButton type="submit" label="Fund transfer"  ></button>
+        
+    </form>
+    <div *ngIf="newBalance" ><h4> Your new balance is {{newBalance}}</h4></div>
+    </div>
+</div>
+<p-toast position="top-right"></p-toast>
+

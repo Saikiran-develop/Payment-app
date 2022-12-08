@@ -1,0 +1,24 @@
+<p>unregister works!</p>
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-3">
+    <h1>Unregister wallet</h1> 
+    <form [formGroup]="unregisterForm"  >
+        <div class="form-group">
+            <label>Id</label>
+            <input formControlName="id" type="text" class="form-control">
+        </div >
+        <div class="form-group">
+            <label>Password</label>
+            <input formControlName="password" type="text" class="form-control">
+        </div >
+
+        <br>
+        
+
+        <button (click)="confirm()" pButton icon="pi pi-times" label="Unregister"></button>
+        
+    </form></div>
+</div>
+<p-confirmDialog header="Delete" ></p-confirmDialog>
+<p-toast position="top-right"></p-toast>
